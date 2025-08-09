@@ -38,6 +38,15 @@ data = load_data()
 
 # Graficar serie
 def plot_series(data, initial_date, proy):
+    """ 
+    Función para graficar la serie de tiempo
+    Args:
+        data: DataFrame con los datos cargados
+        initial_date: Fecha y hora inicial
+        proy: Número de horas a proyectar
+    Returns:
+        fig: Figura con la gráfica
+    """
     data_plot = data.loc[initial_date:]
     data_plot = data_plot[:-(120-proy)]
     fig = go.Figure([
