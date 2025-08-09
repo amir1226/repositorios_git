@@ -243,6 +243,9 @@ app.layout = html.Div(
     Input(component_id="slider-proyeccion", component_property="value")]
 )
 def update_output_div(date, hour, proy):
+    """
+    :return: plot
+    """
 
     if ((date is not None) & (hour is not None) & (proy is not None)):
         hour = str(hour)
